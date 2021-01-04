@@ -1,0 +1,86 @@
+.show-overview {
+    margin-bottom: 20px;
+}
+.show-overview .inner {
+    background-color: #F1F1F1;
+    padding: 20px;
+    box-shadow: 1px 1px 2px #E1E1E1;
+}
+.show-overview .show-image {
+    width: 150px;
+    height: 200px;
+    float: left;
+}
+.show-overview .show-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.show-overview h2 {
+    margin: 0 0 10px 0;
+    color: #177199;
+    text-shadow: 1px 1px 0 #478999;
+    font-family: 'Lobster', cursive;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.show-overview h2 .first-air {
+    color: #999;
+    text-shadow: none;
+    font-size: 16px;
+}
+.show-overview .show-content {
+    font-size: 80px;
+    color: #177199;
+    text-shadow: 1px 1px 0 #478999;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px 0 0 0;
+}
+.show-overview .show-content .num-votes {
+    font-size: 16px;
+}
+.show-overview .show-content .track-btn {
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+    background: #b4cc21;
+    border: none;
+    border-radius: 5px;
+    color: #5a6515;
+    border-bottom: 3px solid #96ab14;
+    text-shadow: 0 1px 0 #d9f07e;
+    padding: 0 10px;
+    line-height: 40px;
+}
+.show-overview .show-content .track-btn.untrack {
+    background: #e74536;
+    color: #fdfdfd;
+    border-bottom: 3px solid #ba382c;
+    text-shadow: 0 -1px 0 #8a3030;
+}
+.show-overview .rating-container {
+    margin-top: 10px;
+    font-size: 32px;
+    color: #fcd400;
+    text-shadow: 1px 1px 0 #ccab00;
+}
+.show-overview .diary-btn {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    display: block;
+    font-size: 18px;
+    background-color: #CCC;
+    padding: 10px;
+    border-radius: 0 0 0 5px;
+    color: #999;
+}
+.show-overview .diary-btn .count {
+    position: absolute;
+    bottom: -30px;
+    font-size: 22px;
+    width: 20px;
+    text-align: center;
+}

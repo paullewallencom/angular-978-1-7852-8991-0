@@ -1,0 +1,20 @@
+<div id="search-page">
+    <h1>Find you favorite shows...</h1>
+    <input type="text" name="query" ng-model="query" class="query" typeahead="show for show in search.typeahead($viewValue)" typeahead-on-select="search.query($item)" />
+    <div class="controls">
+        <p class="loading-msg" ng-show="search.searching">Performing search...</p>
+        <button class="query-btn" ng-click="search.query(query)">Search</button>
+    </div>
+    <ul class="dots"><li></li><li></li><li></li></ul>
+    <ul class="query-results row">
+        <li class="show col-sm-6" ng-repeat="show in search.results track by show.id">
+            <show-overview show="show"></show-overview>
+        </li>
+        <li class="no-data" ng-if="search.results === false">Find shows to track by using the search bar above.</li>
+        <li class="no-data" ng-if="search.results.length == 0">Your search did not return any results, try again.</li>
+    </ul>
+    <div class="pagination-container">
+        <pagination total-items="search.totalResults" ng-model="search.currentPage" items-per-page="20" ng-change="search.query(query)"></pagination>
+    </div>
+    <ul class="dots bottom"><li></li><li></li><li></li></ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="show-overview">
+    <div class="inner">
+        <h2>{{show.name}} <span class="first-air">{{show.first_air_date}}</span></h2>
+        <div class="show-image">
+            <img ng-src="http://image.tmdb.org/t/p/w780{{show.poster_path}}" />
+        </div>
+        <div class="show-content" ng-switch="hasShow(show.id)">
+            {{show.vote_average}}<br />
+            <span class="num-votes">From {{show.vote_count}} votes.</span>
+            <button ng-switch-when="false" class="track-btn" ng-click="trackShow(show)">Track Show</button>
+            <button ng-switch-when="true" class="track-btn untrack" ng-click="unTrackShow(show.id)">Untrack Show</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

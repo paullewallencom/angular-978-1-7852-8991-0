@@ -1,0 +1,8 @@
+<ul class="dots"><li></li><li></li><li></li></ul>
+<ul class="query-results row">
+    <li class="show col-sm-6" ng-repeat="show in myShows.results track by show.id">
+        <show-overview show="show"></show-overview>
+    </li>
+    <li class="no-data" ng-if="myShows.results.length == 0">You have not chosen to track any shows yet, find shows to track <a href="#/search">here</a>.</li>
+</ul>
+<ul class="dots bottom"><li></li><li></li><li></li></ul>

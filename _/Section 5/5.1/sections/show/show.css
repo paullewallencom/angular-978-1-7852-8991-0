@@ -1,0 +1,97 @@
+.show-container h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #666;
+    vertical-align: middle;
+    color: #333;
+}
+.show-container h1 .dots.top {
+    margin-bottom: 10px;
+}
+.show-container h1 .name {
+    font-weight: normal;
+    color: #177199;
+    text-shadow: 1px 1px 0 #478999;
+    font-family: 'Lobster', cursive;
+}
+.show-container .content {
+    background-color: #F1F1F1;
+    margin-top: 35px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0 #E1E1E1;
+}
+.show-container .content .entry-container,
+.show-container .content .list-container {
+    padding: 20px;
+}
+.show-container .content .entry-container h2,
+.show-container .content .list-container h2 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+}
+.show-container .content .show-btn {
+    font-size: 18px;
+    background: #b4cc21;
+    border: none;
+    border-radius: 5px;
+    color: #5a6515;
+    border-bottom: 3px solid #96ab14;
+    text-shadow: 0 1px 0 #d9f07e;
+    padding: 0 10px;
+    line-height: 40px;
+}
+.show-container .content .show-btn.remove-btn {
+    background: #e74536;
+    color: #fdfdfd;
+    border-bottom: 3px solid #ba382c;
+    text-shadow: 0 -1px 0 #8a3030;
+    font-size: 12px;
+    padding: 0 10px;
+    line-height: 25px;
+}
+.show-container .content button[disabled].save-btn {
+    color: #656160;
+    border-bottom: 3px solid #aba39b;
+    text-shadow: 0 1px 0 #f0d7d7;
+    background: #bcbccc;
+}
+.show-container .content .entry-container .controls {
+    text-align: right;
+}
+.show-container .content .list-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.show-container .content .list-container ul li {
+    border-bottom: dotted 1px #CCC;
+    padding-bottom: 20px;
+}
+.show-container .content .list-container ul li.no-data {
+    border-bottom: none;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    color: #999;
+    line-height: 100px;
+}
+.show-container .content .list-container ul li h3 {
+    color: #177199;
+    text-shadow: 1px 1px 0 #478999;
+    font-family: 'Lobster', cursive;
+}
+.show-container .content .list-container ul li h3 .date {
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    text-shadow: 1px 1px 0 #999;
+}
+.show-container .content .list-container ul li p {
+    font-size: 16px;
+    font-style: italic;
+    padding: 20px;
+}
+.show-container .content .list-container ul li .controls {
+    text-align: right;
+}

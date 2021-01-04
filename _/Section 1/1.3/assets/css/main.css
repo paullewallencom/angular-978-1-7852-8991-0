@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+.app-header {
+    height: 60px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.app-header .logo {
+    width: 180px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+    float: left;
+    color: #177199;
+    text-shadow: 1px 1px 0 #478999;
+    font-family: 'Lobster', cursive;
+}
+.app-header nav {
+    margin: 0 0 0 180px;
+}
+.app-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.app-header nav ul li {
+    float: left;
+    width: 33.33%;
+}
+.app-header nav ul li.active {
+
+}
+.app-header nav ul li a .arrow-up {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: -5px auto;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #478999;
+}
+.app-header nav ul li a {
+    display: block;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    line-height: 60px;
+    height: 60px;
+    color: #999;
+    width: 80%;
+    margin: auto;
+}
+
+.app-header nav ul li a.active {
+    border-bottom: solid 1px #478999;
+    color: #478999;
+}
+
+.app-header nav ul li a.active .arrow-up {
+    opacity: 1;
+}
+.main-container {
+    margin-top: 20px;
+}

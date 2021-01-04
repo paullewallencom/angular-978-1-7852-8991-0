@@ -1,0 +1,61 @@
+<div class="show-container">
+    <h1><ul class="dots top"><li></li><li></li><li></li></ul> My <span class="name">{{show.data.name}}</span> diary... <ul class="dots bottom"><li></li><li></li><li></li></ul></h1>
+    <div class="content row">
+        <div class="entry-container col-md-6">
+            <h2>New entry</h2>
+            <form name="show.newEntryForm" novalidate>
+                <div class="form-group">
+
+                    <div class="form-group" ng-class="{'has-error': (show.newEntryForm.seasonNumber.$invalid), 'has-success': (show.newEntryForm.seasonNumber.$valid)}">
+                        <label class="control-label">Season #:</label>
+                        <select name="seasonNumber" ng-model="show.newEntry.seasonNumber" id="seasonNumber" class="form-control" ng-change="show.getEpisodes(show.newEntry.seasonNumber)" required>
+                            <option value="">Select season...</option>
+                            <option ng-repeat="season in show.seasons track by season.season_number" value="{{season.season_number}}">#{{season.season_number}}</option>
+                        </select>
+                        <div class="input-error" ng-messages="show.newEntryForm.seasonNumber.$error">
+                            <div class="message" ng-message="required">This field is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{'has-error': (show.newEntryForm.episode.$invalid), 'has-success': (show.newEntryForm.episode.$valid)}">
+                        <label class="control-label">Episode:</label>
+                        <select name="episode" id="episode" ng-model="show.newEntry.episode" class="form-control" ng-disabled="show.gettingEpisodes || show.episodes.length == 0 || !show.newEntry.seasonNumber" required>
+                            <option value="">Select episode...</option>
+                            <option ng-repeat="episode in show.episodes track by episode.id" value="{{episode.episode_number}}">#{{episode.episode_number}} - {{episode.name}}</option>
+                        </select>
+                        <div class="input-error" ng-messages="show.newEntryForm.episode.$error">
+                            <div class="message" ng-message="required">This field is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{'has-error': (show.newEntryForm.entry.$invalid), 'has-success': (show.newEntryForm.entry.$valid)}">
+                        <label class="control-label">Entry:</label>
+                        <textarea name="entry" ng-model="show.newEntry.entry" rows="5" class="form-control" ng-disabled="!show.newEntry.episode" required min-words="10"></textarea>
+                        <div class="input-error" ng-messages="show.newEntryForm.entry.$error">
+                            <div class="message" ng-message="required">This field is required</div>
+                            <div class="message" ng-message="minWords">You must provide at least 10 words</div>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button ng-disabled="show.newEntryForm.$invalid" class="show-btn save-btn" ng-click="show.saveEntry()">Save</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="list-container col-md-6">
+            <h2>Past entries</h2>
+            <ul>
+                <li ng-repeat="entry in show.data.diary_entries track by $index">
+                    <h3>Season #{{entry.seasonNumber}} Episode #{{entry.episode}} <span class="date">added on {{entry.date | date}}.</span></h3>
+                    <p>{{entry.entry}}</p>
+                    <div class="controls">
+                        <button class="show-btn remove-btn" ng-click="show.removeEntry($index)">Remove</button>
+                    </div>
+                </li>
+                <li ng-if="!show.data.diary_entries || show.data.diary_entries.length === 0" class="no-data">There are currently no entries.</li>
+            </ul>
+        </div>
+    </div>
+</div>

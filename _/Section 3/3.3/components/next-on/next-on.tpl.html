@@ -1,0 +1,24 @@
+<div class="next-on">
+    <h1>Next on...</h1>
+    <ul>
+        <li ng-repeat="episode in nextEpisodes | orderBy:'air_date' | limitTo:limit " ng-class="{'col-md-12 first': ($index === 0), 'col-md-4': ($index > 0)}">
+            <div class="episode-content" ng-class="{'col-md-6': ($index === 0)}">
+                <div class="episode-title">
+                    <h2>{{episode.name}}</h2>
+                    <h3>{{episode.showName}}</h3>
+                    <span class="date">({{episode.air_date | date}})</span>
+                </div>
+                <div class="episode-image" ng-switch="episode.still_path">
+                    <img ng-switch-when="null" ng-src="http://image.tmdb.org/t/p/w780{{episode.showImage}}" />
+                    <img ng-switch-default ng-src="http://image.tmdb.org/t/p/w780{{episode.still_path}}" />
+                </div>
+            </div>
+            <div ng-if="$index === 0" class="episode-overview col-md-6">
+                <p>{{episode.overview}}</p>
+                <a href="{{episode.homepage}}" target="_blank" class="more-btn">Read More</a>
+            </div>
+            <div class="clearfix"></div>
+        </li>
+        <li class="no-data" ng-if="nextEpisodes.length === 0">None of your tracked shows are airing soon.</li>
+    </ul>
+</div>

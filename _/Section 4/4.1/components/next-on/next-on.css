@@ -1,0 +1,76 @@
+.next-on h1 {
+    font-weight: 300;
+}
+.next-on .date {
+    color: #FFF;
+    font-weight: bold;
+}
+.next-on .no-data {
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 0 5px #CCC;
+    color: #999;
+}
+.next-on .episode-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.next-on ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.next-on ul li {
+    margin-bottom: 20px;
+}
+.next-on ul li.first {
+    padding: 0;
+    box-shadow: 0 0 5px #CCC;
+}
+.next-on ul li.first .episode-content {
+    padding: 0;
+}
+.next-on ul li .more-btn {
+    width: 120px;
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+    background: #b4cc21;
+    border: none;
+    border-radius: 5px;
+    color: #5a6515;
+    border-bottom: 3px solid #96ab14;
+    text-shadow: 0 1px 0 #d9f07e;
+    padding: 0 10px;
+    line-height: 40px;
+}
+.next-on ul li.first .episode-overview {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.next-on ul li h2,
+.next-on ul li h3 {
+    margin: 0;
+    padding: 0;
+}
+.next-on ul li h2 {
+    color: #177199;
+    text-shadow: 1px 1px 0 #478999;
+    font-family: 'Lobster', cursive;
+}
+.next-on ul li h3 {
+    font-weight: 300;
+    color: #E1E1E1;
+}
+.next-on .episode-content {
+    position: relative;
+}
+.next-on .episode-title {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    padding: 10px;
+}

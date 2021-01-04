@@ -1,0 +1,19 @@
+<ul class="dots"><li></li><li></li><li></li></ul>
+<ul class="query-results row">
+    <li class="show col-sm-6" ng-repeat="show in myShows.results track by show.id">
+        <div class="inner">
+            <h2>{{show.name}} <span class="first-air">{{show.first_air_date}}</span></h2>
+            <div class="show-image">
+                <img ng-src="http://image.tmdb.org/t/p/w780{{show.poster_path}}" />
+            </div>
+            <div class="show-content">
+                {{show.vote_average}}<br />
+                <span class="num-votes">From {{show.vote_count}} votes.</span>
+                <button class="track-btn untrack" ng-click="myShows.unTrackShow(show.id)">Untrack Show</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="no-data" ng-if="myShows.results.length == 0">You have not chosen to track any shows yet, find shows to track <a href="#/search">here</a>.</li>
+</ul>
+<ul class="dots bottom"><li></li><li></li><li></li></ul>
